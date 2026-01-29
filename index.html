@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad-Free YouTube Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ad-Free YouTube</h1>
+            <p>Paste your video URL to watch without ads</p>
+        </header>
+
+        <div class="input-section">
+            <input
+                type="text"
+                id="videoUrl"
+                placeholder="Paste YouTube URL here (e.g., https://www.youtube.com/watch?v=...)"
+                autocomplete="off"
+            >
+            <button id="loadBtn">Load Video</button>
+        </div>
+
+        <div class="video-container" id="videoContainer">
+            <div class="placeholder">
+                <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M23 7l-7 5 7 5V7z"></path>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                </svg>
+                <p>Paste a YouTube URL and click "Load Video" to start watching</p>
+            </div>
+        </div>
+
+        <div class="playlist-section">
+            <h3>Video Queue</h3>
+            <div id="playlist" class="playlist"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
